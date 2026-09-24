@@ -1,4 +1,5 @@
 import dotenv from "dotenv"
+import type { StringValue } from "ms";
 import path from "path"
 
 dotenv.config({
@@ -11,6 +12,8 @@ const config = {
     port: process.env.PORT,
     secret : process.env.JWT_SECRET,
     refresh_secret: process.env.REFRESH_SECRET,
+    access_duration: process.env.ACCESS_DURATION as StringValue,
+    refresh_duration: process.env.REFRESH_DURATION as StringValue,
 }
 
 export default config;
